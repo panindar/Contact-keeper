@@ -34,7 +34,7 @@ router.post('/', [
           password
       })
 
-    //   if (user.name === '1') {
+    //   if (1 === '1') {
     //     console.log('hello is it good')
     //   }
 

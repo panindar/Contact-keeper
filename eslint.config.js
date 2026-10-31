@@ -14,4 +14,10 @@ module.exports = [
       'no-unused-vars': ['warn', { argsIgnorePattern: '^_|^next$' }],
     },
   },
+  {
+    files: ['tests/**/*.js', '**/*.test.js'],
+    languageOptions: {
+      globals: { ...globals.node, ...globals.jest },
+    },
+  },
 ];
