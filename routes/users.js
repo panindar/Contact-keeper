@@ -25,7 +25,7 @@ router.post('/', [
   try {
       let user = await User.findOne({email});
       if(user){
-          res.status(400).json({msg: 'user already exists'});
+         return res.status(400).json({msg: 'user already exists'});
       }
 
       user = new User({
@@ -33,6 +33,10 @@ router.post('/', [
           email,
           password
       })
+
+    //   if (user.name === '1') {
+    //     console.log('hello is it good')
+    //   }
 
       const salt = await bcrypt.genSalt(10);
       user.password = await bcrypt.hash(password, salt);

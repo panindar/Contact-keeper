@@ -14,7 +14,7 @@ try {
     req.user = decoded.user;
     next()
 } catch (err) {
-    
+    console.log(`err in json validation ${err}`)
     res.status(401).json({msg:'token is not valid'});
 }
 }
