@@ -34,9 +34,9 @@ router.post('/', [
           password
       })
 
-      if (1 === '1') {
-        console.log('hello is it good')
-      }
+    //   if (1 === '1') {
+    //     console.log('hello is it good')
+    //   }
 
       const salt = await bcrypt.genSalt(10);
       user.password = await bcrypt.hash(password, salt);
