@@ -1,3 +1,6 @@
+
+LABEL org.opencontainers.image.source="https://github.com/panindar/Contact-keeper"
+
 FROM node:22-slim
 WORKDIR /app
 COPY package*.json ./
